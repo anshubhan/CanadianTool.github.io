@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--  This website template was created by: Anshu Bhan, C0747597 -->
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="css/training.css">
+	<title> Canadian Tools </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="http://12.42.204.30:7004/jquery.jtable.js"></script>
+	<script src="http://12.42.204.30:7004/helpers.js"></script>
+	<link href="http://12.42.204.30:7004/themes/lightcolor/gray/jtable.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://12.42.204.30:7004/myStyles.css">
+
+	<!-- The above code should not be changed -->
+
+	<!-- Change title to program exercise (i.e. P01, P02) -->
+	
+	<script>
+	$(document).ready(function() {
+		$('#container1').jtable({
+			title : 'Canadian Tool',
+			paging : true,
+			pageSize : 5,
+			sorting : true,
+			defaultSorting : 'product_id DESC',
+			actions : {
+				listAction : 'genJson2.rpgle?jtView=ibm7184V1'
+			},
+			fields : {
+				product_id : {
+					title : 'product_id',
+					width : '10%',
+					list : true
+				},
+				serial_number : {
+					title : 'serial_number',
+					width : '10%',
+					list : true
+				},
+				brand : {
+					title : 'brand',
+					width : '10%',
+					list : true
+				},
+				description : {
+					title : 'description',
+					width : '10%',
+					list : true,
+				},
+				price : {
+					title : 'price',
+					width : '10%',
+					list : true,
+					display : function(data) {
+						return formatCurrency(data.record.price)
+					},
+				}
+			}
+		});
+		$('#container1').jtable('load');
+	});
+</script>
+</head>
+
+<body>	
+<main>
+	<div id= "container">
+
+	<header>
+		<img class="icons"  src="images/gif.gif" alt="Canadian Tools Logo"  >
+		<img class="icon" src="images/tools_logo.jpg" alt="Canadian Tools Logo">
+		<h1 class="size"> Canadian Tools </h1>
+		<h2 class="blink"> Best Tools Ever </h2>	
+	</header>
+	
+    <nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About us</a></li>
+			<li><a href="team.html">Meet our Team</a></li>
+			<li><a href=" http://12.42.204.30:7184/products.html">Products</a></li>
+			<li><a href="training.html">Training Schedule</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+	</nav>
+	
+	
+		
+	</main>
+ 
+	<footer>
+		&copy; Copyright 2099, All Rights Reserved. <br>
+		<a class="footercolor" href="mailto:info@canadian_tools.com">Request information</a><br>
+		Anshu Bhan &nbsp; &nbsp; C0747597 
+	</footer>
+
+	</div>
+</body>
+</html>  

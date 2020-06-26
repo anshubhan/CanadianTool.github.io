@@ -1,0 +1,325 @@
+/* Style for body specifies a background color */
+body{
+	background-color: #252424;
+}
+
+/* Style to create a fluid image */
+img { 
+	max-width: 100%;
+}
+
+/* Styles for Mobile Layout */
+
+/* styles the container centers the page and sets the elements width */
+#container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Style for the header specifies top margin, background color, rounded corners, and center-aligns content*/
+header {
+	background-color: #FFFFFF;
+	font-size:10px;
+	margin-top: 10px;
+	margin-bottom:10px;
+	border-radius:20px;
+	box-shadow: 8px 8px 8px #17202A;
+	overflow:auto;
+}
+.icon {
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+	border:20px;
+	max-width:20%;
+}
+
+.icons {
+	float:right;
+	margin-right:10px;
+	margin-top:10px;
+	max-width:20%;
+}
+
+.ico {
+	max-width:100%;
+}
+
+.footercolor {
+	color:white;
+}
+
+.blink {
+	animation:blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity : 0;
+	}
+}
+	
+h1 {
+ font-weight:bold;
+ text-align:center;
+}
+	
+h2 {
+	font-size:25px;
+	color: #52322B;
+	text-align:center;
+}
+
+/* Style for the nav specifies text properties	 */
+nav {
+	font-family: Georgia,"Times New Roman",	serif;
+	font-size: 20px;
+	font-weight: bold;
+	font-style:normal;
+	text-align:center;
+	color: #17202A;
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	padding-top:20px;
+	border:20px;
+}
+
+nav ul { 
+    display: inline; 
+	padding: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+
+/* Style for nav li specifies the background color, rounded corners, removes bullet style, and applies margins and padding for list items within the navigation */
+nav li {
+	background-color: #FDFCF2;
+	border-radius: 2em;
+	list-style-type: none;
+	margin: 0.3em; 
+	padding: 0.4em; 
+}
+
+/* Style changes navigation link text color to white and removes the underline */
+nav li a {
+	display: inline;
+	color: #000000; 
+	text-decoration: none;
+}
+ 
+	/* Style rules for pseudo-classes */
+nav li a:link {
+	color: #000000;
+}
+	
+nav li a:visited {
+	color: #000000;
+}
+	
+nav li a:hover {
+	color: #808080;
+	font-style: italic;
+}
+
+
+/*Style for the main element specifies a block display, text properties, margins, padding, rounded corners, and border properties */
+main {
+	display: block;
+	font-family: Georgia,"Times New Roman",	serif;
+	font-size:20px;
+	font-style:normal;
+	margin-top:15px;
+	margin-bottom:15px;
+	padding-top:7px;
+	padding-bottom:10px;
+	box-shadow: 8px 8px 8px #17202A;
+	background-color: #FCFBEC;
+}
+
+/* Stylerule for the video class*/
+.video {
+	padding: 1em;
+	text-align: center;
+	margin-right: 1em;
+}
+
+/* Stylerule for video element */
+video {
+	border: 0.5em ridge #FFFFFF;
+	height: auto;
+	max-width: 100%;
+}
+
+/*Styles for footer specifies font size,text alignment,and top margin */
+ footer{ 
+	font-size:  .70em;
+	text-align: center; 
+	margin-top: 2em;
+	color:#FFFFFF;
+}
+
+ /* Style displays the mobile class */
+ .mobile {
+	display:inline;
+ }
+ 
+ /* Style hides the desktop class */
+ .desktop { 
+	display: none;
+ }
+ 
+ /* Style hides the tablet class */
+.tablet { 
+	display: none;
+}
+
+
+
+/* Media query for tablet viewport targets screen size with a minimum width of 660px. */
+
+@media only screen and (min-width: 660px) {
+	
+	header {
+		font-size:20px;
+	}
+	
+	/* Style specifies a horizontal display for navigation links */
+	nav li {
+		display: inline;
+		float: left;
+		margin-left: 1%;
+		margin-right: 1%;
+		padding-left: 0;
+		padding-right: 0;
+		width: 28%;
+		white-space: nowrap;
+	}
+	
+	/* Style specifies clear and top margin properties for the main element */
+	main {
+		clear: left;
+		margin-top: 4em;
+	}
+	
+				/* Style rules for pseudo-classes */
+	nav li a:link {
+		color: #000000;
+	}
+	
+	nav li a:visited {
+		color: #000000;
+	}
+	
+	nav li a:hover {
+		color: #808080;
+		font-style: italic;
+	}
+	
+	/* Style specifies to hide the mobile class */
+	.mobile {
+		display: inline;
+	}
+	
+	.desktop {
+		display: none;
+	}
+	
+	/* Style specifies to display the tablet class */
+	.tablet {
+		display: inline;
+	}
+}
+
+/* Media query for desktop viewport targets screens with a minimum width of 830px. */
+
+@media only screen and (min-width: 830px) {
+	
+	/* Style specifies a width for container */
+	#container {
+		width: 80%;
+	}
+	
+	header {
+		font-size:30px;
+	}
+	
+	/* Style specifies margin and padding for the unordered list within the nav */
+	nav ul {
+		margin: 0;
+		padding-left:0.10%;
+		padding-right:0.10%;
+	}
+	
+	/* Style for navigation list items specifies a border radius, border, margin, width, and padding */
+	nav li {
+		border-radius: 0;
+		border-top:solid #000000;
+		border-bottom:solid #000000;
+		margin-left:0;
+		margin-right:0;
+		
+		width: 16.5%;
+	}
+	
+	/* Style for navigation links specifies display and padding */
+	nav li a {
+		display: inline-block;
+		padding: 0.4em;
+	}
+	
+		/* Style rules for pseudo-classes */
+	nav li a:link {
+		color: #000000;
+	}
+	
+	nav li a:visited {
+		color: #000000;
+	}
+	
+	nav li a:hover {
+		color: #808080;
+		font-style: italic;
+	}
+
+	
+	/* Style specifies border, shadow, margin, and padding for main element */
+	main {
+		border-style: none;
+		box-shadow: 0.5em 0.5em 0.5em #404040;
+		margin-bottom:1em;
+		margin-top: 1em;
+	}
+	
+	/* Style specifies left and right padding for paragraph elements within the main element */
+	main p {
+		padding-left: 0.5em;
+		padding-right:0.5em;
+	}
+	
+
+	/* Style specifies a gradient for the body element */
+	body {
+		background: -moz-linear-gradient(#252424, #252424); /* Firefox */
+		background: -o-linear-gradient(#252424,#252424); /* Opera */
+		background: -webkit-linear-gradient(#252424, #252424); /* Chrome, Safari */
+		background: linear-gradient(#252424,#252424);
+		background-attachment: fixed;
+	}
+		
+		/* Style specifies to hide the mobile class */
+	.mobile {
+		display: inline;
+	}
+	
+	.tablet {
+		display:inline;
+	}
+	
+	.desktop {
+		display: inline;
+	}
+		
+}
+
